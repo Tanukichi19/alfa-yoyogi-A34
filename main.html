@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>異世怪者ノ実験 │ Project N</title>
+  <title>封鎖された家庭科室からの脱出 │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -29,15 +29,14 @@
 
       <!-- STAGE1　ここから -->
       <div id="sectionStage1" class="stage">
-        
-         <!--STAGE1問題セクション　ここから　-->
-      <section class="section">
+
+        <!-- STAGE1問題セクション　ここから -->
+        <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>友人を部屋から脱出させよ！</h2>
-            <p class="text-center">彼女は一体どこにいるのだろうか？<br>
-              
-             友人のメールには今いる扉を開けるための合言葉が隠されていると思われる不思議な画像が送られてきた。<br>
-            </p>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
+            <p class="text-center">まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
+            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
   
             <div class="container">
               <figure class="image__container">
@@ -53,13 +52,14 @@
 Youtube貼り付けここまで -->
                 
             </div>
+          </div>
         </section>
         <!-- STAGE1問題セクション　ここまで -->
 
         <!-- STAGE1解答入力セクション　ここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>A.（ひらがなで入力）</h2>
+            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを入力</h2>
             <!------------------------------------------------------------------------------------------------------------
               解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
               v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
@@ -70,11 +70,9 @@ Youtube貼り付けここまで -->
             ------------------------------------------------------------------------------------------------------------>
             <answer-input v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>
 
-            <a class="link-hint" href="hint1.html" target="hint1">友人からのアドバイス></a>
+            <a class="link-hint" href="hint1.html" target="hint1">ヒントをみる ></a>
           </div>
-         </div>
         </section>
-         
         <!-- STAGE1解答入力セクション　ここまで -->
 
         <!-- STAGE1クリア画面　ここから -->
@@ -87,10 +85,9 @@ Youtube貼り付けここまで -->
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：１  クリア！</div>
-              <div class="clear-message__content">彼女は閉じ込められていた部屋からなんとか脱出することができた。<br>
-               そこは捕獲してきた生体を使い、実験をする研究室だった！ <br>
-                その後彼女は慎重に船内を調べていく上で船内の構図を記していると思われる地図を手に入れることができた。
-              </div>
+              <div class="clear-message__content">家庭科室の扉が開いた！<br>
+                さぁ先生を助けるため<br>
+                ３つステージの謎をとき、暗号を見つけ出そう！</div>
               <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -109,17 +106,15 @@ Youtube貼り付けここまで -->
         <section>
           <div class="section">
             <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>脱出用の小型船を入手せよ！</h2>
-              <p class="text-center">あなたの協力もあって、地図を入手し、解読すると宇宙船には小型船があり、<br>
-                それを使えば脱出することができるのではと考えた。<br>
-                だが操縦するために小型船の乗り方が記されている宇宙船の設計図を手に入れなくてはいけない。<br>
-                だがそれにはロックがかかっていて解除コードが必要なようだ。<br>
-                宇宙人の書き置きと思われるものを写真で送られてきたが、これを見れば答えにつながりそうだ…</p>
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>黒板に書かれている謎を解け！</h2>
+              <p class="text-center">家庭科室に入ることができた！<br>
+                すぐに目に入ったのは黒板にある４つの謎。<br>
+                これらを解くことで、きっと次のステップに繋がるはずだ！</p>
             </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>Code.(数字は半角で入力）</h2>
+              <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
               <!-------------------------------------------------------------
                 class名"row"内のclass名"column"が横並びになります。
                 改行する場合は以下のように追加してください。
@@ -140,7 +135,7 @@ Youtube貼り付けここまで -->
                   <!-- STAGE2-1問題セクション　ここまで -->
                   <!-- STAGE2-1解答入力セクション　ここから -->
                   <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">友人からのアドバイス ></a>
+                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
                   <!-- STAGE2-1解答入力セクション　ここまで -->
                 </div><!-- /.column -->
                 <!-- STAGE2-1　ここまで -->
@@ -177,11 +172,8 @@ Youtube貼り付けここまで -->
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">小型船を手に入れて脱出まではあと一歩だ。<br>
-                小型船の操縦は以外にもISSのロボットアームと同じのなので心配はなさそうだ。<br>
-                それにしてもさっきから誰かの視線を感じるのかなぜか…<br>
-                とにかく今は彼女が脱出するための手助けが重要だ！
-                問題を解決し、彼女を助けよう！</div>
+              <div class="clear-message__content">黒板の指示に従い、<br>
+                次のステージの謎を解こう！</div>
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -196,12 +188,10 @@ Youtube貼り付けここまで -->
         <!-- STAGE3-1問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>宇宙船を爆破せよ！</h2>
-            <p class="text-center">なんとかして船内の宇宙人達の目を欺けば、その間に脱出できると考えた二人はそのために宇宙船の制御室まで来ていた。<br>
-              エンジンのの冷却装置を機能停止させれば、熱暴走で破壊することができると考え、制御コントロールのメインシステムまで来たのはいいが、<br>
-              それにはセキュリティを突破するためのコードが必要なようだ。<br>
-              あなたに送られてきた写真を解き明かせば何かわかるかもしれない…
-            </p>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>家庭科室の課題とは</h2>
+            <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
+              どうやら、廃棄にかかる費用がかかりすぎて小学校の運営が厳しくなったようだ。。<br>
+              これらを解決するための最後の謎を解いていこう！</p>
             <figure class="image__container">
               <img src="assets/images/stage.png" alt="">
             </figure>
@@ -212,14 +202,14 @@ Youtube貼り付けここまで -->
         <!-- STAGE3-1解答入力セクションここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>Code.(記号はカタカナ、数字は半角で入力）</h2>
+            <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h2>
             <!-----------------------------------------------------------------------------------------------------------------
               解答入力欄のコンポーネントです。
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
             <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1, 'final')"></answer-input>
-            <a class="link-hint" href="hint3.html" target="hint3">友人からのアドバイス></a>
+            <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
         </section>
         <!-- STAGE3-1解答入力セクション　ここまで -->
